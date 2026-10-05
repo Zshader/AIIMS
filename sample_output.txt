@@ -1,0 +1,183 @@
+== Staging in: /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI ==
+== Venv in: /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-scan-venv-XXXXXX.xOuAML5Tl1 ==
+== Using python3.11 (Python 3.11) ==
+== Creating isolated venv ==
+== Installing scan tools (modelscan, fickling, huggingface_hub) ==
+== Checking source legitimacy for sshleifer/tiny-gpt2 ==
+Author:        sshleifer
+Downloads:      1262299
+Likes:          36
+Created:        2022-03-02 23:29:05+00:00 (1672 days ago)
+Last modified:  2021-05-23 12:55:11+00:00
+Gated:          False
+Private:        False
+License:        not specified
+Model page:     https://huggingface.co/sshleifer/tiny-gpt2  <- manually check for verified-org badge
+WARNING: review before proceeding — no license specified in model card
+== Checking total download size for sshleifer/tiny-gpt2 ==
+Total download size for sshleifer/tiny-gpt2: 4.5 MB
+== Downloading sshleifer/tiny-gpt2 into quarantine (no load, no execution) ==
+== Computing SHA-256 checksums ==
+5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/tokenizer_config.json
+c0b3c279b6ecdb71996a86ffb4d4ab94dfdb5df95f00bac9515688faef2ff5dd  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/special_tokens_map.json
+77a9e9830c3abeba929f5c61e0e97c398f98b4481ad75516c0be5bf038b340b0  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/config.json
+1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/merges.txt
+f049f7c0d16eaffe605baca479013bcb7a3847077cf6e548ba7b228831cf9c38  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.gitattributes
+b706b24034032bdfe765ded5ab6403d201d295a995b790cb24c74becca5c04e6  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/pytorch_model.bin
+03087853bc70c618b66e7c7a43e787d2db4c469416beac9a483e53dad1f72f27  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/vocab.json
+09166c56d46ec8eca5f1e46e4e4a62265fca5975a70a2b263c1795291a685cf7  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/tf_model.h5
+3cd4987249615ca870f2c18e657a62f0962aecad0eac790dd89362227310fd30  /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/flax_model.msgpack
+== Running ModelScan ==
+No settings file detected at /Users/<user>/Library/<path>/model_scanner/modelscan-settings.toml. Using defaults. 
+
+Scanning /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/pytorch_model.bin using modelscan.scanners.PyTorchUnsafeOpScan model scan
+Model Config not found in: /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/tf_model.h5
+Scanning /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/tf_model.h5 using modelscan.scanners.H5LambdaDetectScan model scan
+
+--- Summary ---
+
+ No issues found! 🎉
+
+--- Skipped --- 
+
+Total skipped: 29 - run with --show-skipped to see the full list.
+ModelScan result: PASS (full output: /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI.modelscan.txt)
+== Running Fickling on any pickle-based files (.bin, .pt, .pth) ==
+-- fickling check: /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/pytorch_model.bin --
+result0 = 119547037146038801333356
+result1 = 1001
+result2 = {'protocol_version': 1001, 'little_endian': True, 'type_sizes': {'short': 2, 'int': 4, 'long': 4}}
+from collections import OrderedDict
+_var0 = OrderedDict()
+from torch._utils import _rebuild_tensor_v2
+from torch import FloatStorage
+_var1 = OrderedDict()
+_var2 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483806056448', 'cpu', 100514, None)), 0, (50257, 2), (2, 1), False, _var1)
+_var3 = OrderedDict()
+_var4 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805481824', 'cpu', 2048, None)), 0, (1024, 2), (2, 1), False, _var3)
+_var5 = OrderedDict()
+_var6 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483808401520', 'cpu', 2, None)), 0, (2,), (1,), False, _var5)
+_var7 = OrderedDict()
+_var8 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483806051184', 'cpu', 2, None)), 0, (2,), (1,), False, _var7)
+from torch import ByteStorage
+_var9 = OrderedDict()
+_var10 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', ByteStorage, '140483805491872', 'cpu', 1048576, None)), 0, (1, 1, 1024, 1024), (1048576, 1048576, 1024, 1), False, _var9)
+_var11 = OrderedDict()
+_var12 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805491776', 'cpu', 1, None)), 0, (), (), False, _var11)
+_var13 = OrderedDict()
+_var14 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805497648', 'cpu', 12, None)), 0, (2, 6), (6, 1), False, _var13)
+_var15 = OrderedDict()
+_var16 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805488544', 'cpu', 6, None)), 0, (6,), (1,), False, _var15)
+_var17 = OrderedDict()
+_var18 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805488656', 'cpu', 4, None)), 0, (2, 2), (2, 1), False, _var17)
+_var19 = OrderedDict()
+_var20 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805489552', 'cpu', 2, None)), 0, (2,), (1,), False, _var19)
+_var21 = OrderedDict()
+_var22 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805497744', 'cpu', 2, None)), 0, (2,), (1,), False, _var21)
+_var23 = OrderedDict()
+_var24 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805497872', 'cpu', 2, None)), 0, (2,), (1,), False, _var23)
+_var25 = OrderedDict()
+_var26 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805493376', 'cpu', 16, None)), 0, (2, 8), (8, 1), False, _var25)
+_var27 = OrderedDict()
+_var28 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805502688', 'cpu', 8, None)), 0, (8,), (1,), False, _var27)
+_var29 = OrderedDict()
+_var30 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805502016', 'cpu', 16, None)), 0, (8, 2), (2, 1), False, _var29)
+_var31 = OrderedDict()
+_var32 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805503888', 'cpu', 2, None)), 0, (2,), (1,), False, _var31)
+_var33 = OrderedDict()
+_var34 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805502800', 'cpu', 2, None)), 0, (2,), (1,), False, _var33)
+_var35 = OrderedDict()
+_var36 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805502928', 'cpu', 2, None)), 0, (2,), (1,), False, _var35)
+_var37 = OrderedDict()
+_var38 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', ByteStorage, '140483805504080', 'cpu', 1048576, None)), 0, (1, 1, 1024, 1024), (1048576, 1048576, 1024, 1), False, _var37)
+_var39 = OrderedDict()
+_var40 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805505520', 'cpu', 1, None)), 0, (), (), False, _var39)
+_var41 = OrderedDict()
+_var42 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805506880', 'cpu', 12, None)), 0, (2, 6), (6, 1), False, _var41)
+_var43 = OrderedDict()
+_var44 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805507808', 'cpu', 6, None)), 0, (6,), (1,), False, _var43)
+_var45 = OrderedDict()
+_var46 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805507920', 'cpu', 4, None)), 0, (2, 2), (2, 1), False, _var45)
+_var47 = OrderedDict()
+_var48 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805509008', 'cpu', 2, None)), 0, (2,), (1,), False, _var47)
+_var49 = OrderedDict()
+_var50 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805507024', 'cpu', 2, None)), 0, (2,), (1,), False, _var49)
+_var51 = OrderedDict()
+_var52 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805510208', 'cpu', 2, None)), 0, (2,), (1,), False, _var51)
+_var53 = OrderedDict()
+_var54 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805509184', 'cpu', 16, None)), 0, (2, 8), (8, 1), False, _var53)
+_var55 = OrderedDict()
+_var56 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805511456', 'cpu', 8, None)), 0, (8,), (1,), False, _var55)
+_var57 = OrderedDict()
+_var58 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805510848', 'cpu', 16, None)), 0, (8, 2), (2, 1), False, _var57)
+_var59 = OrderedDict()
+_var60 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805512720', 'cpu', 2, None)), 0, (2,), (1,), False, _var59)
+_var61 = OrderedDict()
+_var62 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805511568', 'cpu', 2, None)), 0, (2,), (1,), False, _var61)
+_var63 = OrderedDict()
+_var64 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483805511696', 'cpu', 2, None)), 0, (2,), (1,), False, _var63)
+_var65 = OrderedDict()
+_var66 = _rebuild_tensor_v2(UNPICKLER.persistent_load(('storage', FloatStorage, '140483806056448', 'cpu', 100514, None)), 0, (50257, 2), (2, 1), False, _var65)
+_var67 = _var0
+_var67.update({'transformer.wte.weight': _var2, 'transformer.wpe.weight': _var4, 'transformer.h.0.ln_1.weight': _var6, 'transformer.h.0.ln_1.bias': _var8, 'transformer.h.0.attn.bias': _var10, 'transformer.h.0.attn.masked_bias': _var12, 'transformer.h.0.attn.c_attn.weight': _var14, 'transformer.h.0.attn.c_attn.bias': _var16, 'transformer.h.0.attn.c_proj.weight': _var18, 'transformer.h.0.attn.c_proj.bias': _var20, 'transformer.h.0.ln_2.weight': _var22, 'transformer.h.0.ln_2.bias': _var24, 'transformer.h.0.mlp.c_fc.weight': _var26, 'transformer.h.0.mlp.c_fc.bias': _var28, 'transformer.h.0.mlp.c_proj.weight': _var30, 'transformer.h.0.mlp.c_proj.bias': _var32, 'transformer.h.1.ln_1.weight': _var34, 'transformer.h.1.ln_1.bias': _var36, 'transformer.h.1.attn.bias': _var38, 'transformer.h.1.attn.masked_bias': _var40, 'transformer.h.1.attn.c_attn.weight': _var42, 'transformer.h.1.attn.c_attn.bias': _var44, 'transformer.h.1.attn.c_proj.weight': _var46, 'transformer.h.1.attn.c_proj.bias': _var48, 'transformer.h.1.ln_2.weight': _var50, 'transformer.h.1.ln_2.bias': _var52, 'transformer.h.1.mlp.c_fc.weight': _var54, 'transformer.h.1.mlp.c_fc.bias': _var56, 'transformer.h.1.mlp.c_proj.weight': _var58, 'transformer.h.1.mlp.c_proj.bias': _var60, 'transformer.ln_f.weight': _var62, 'transformer.ln_f.bias': _var64, 'lm_head.weight': _var66})
+_var68 = OrderedDict()
+_var69 = _var68
+_var69.update({'': {'version': 1}, 'transformer': {'version': 1}, 'transformer.wte': {'version': 1}, 'transformer.wpe': {'version': 1}, 'transformer.drop': {'version': 1}, 'transformer.h': {'version': 1}, 'transformer.h.0': {'version': 1}, 'transformer.h.0.ln_1': {'version': 1}, 'transformer.h.0.attn': {'version': 1}, 'transformer.h.0.attn.c_attn': {'version': 1}, 'transformer.h.0.attn.c_proj': {'version': 1}, 'transformer.h.0.attn.attn_dropout': {'version': 1}, 'transformer.h.0.attn.resid_dropout': {'version': 1}, 'transformer.h.0.ln_2': {'version': 1}, 'transformer.h.0.mlp': {'version': 1}, 'transformer.h.0.mlp.c_fc': {'version': 1}, 'transformer.h.0.mlp.c_proj': {'version': 1}, 'transformer.h.0.mlp.dropout': {'version': 1}, 'transformer.h.1': {'version': 1}, 'transformer.h.1.ln_1': {'version': 1}, 'transformer.h.1.attn': {'version': 1}, 'transformer.h.1.attn.c_attn': {'version': 1}, 'transformer.h.1.attn.c_proj': {'version': 1}, 'transformer.h.1.attn.attn_dropout': {'version': 1}, 'transformer.h.1.attn.resid_dropout': {'version': 1}, 'transformer.h.1.ln_2': {'version': 1}, 'transformer.h.1.mlp': {'version': 1}, 'transformer.h.1.mlp.c_fc': {'version': 1}, 'transformer.h.1.mlp.c_proj': {'version': 1}, 'transformer.h.1.mlp.dropout': {'version': 1}, 'transformer.ln_f': {'version': 1}, 'lm_head': {'version': 1}})
+_var70 = _var67
+_var70.__setstate__({'_metadata': _var69})
+result3 = _var70
+result4 = ['140483805481824', '140483805488544', '140483805488656', '140483805489552', '140483805491776', '140483805491872', '140483805493376', '140483805497648', '140483805497744', '140483805497872', '140483805502016', '140483805502688', '140483805502800', '140483805502928', '140483805503888', '140483805504080', '140483805505520', '140483805506880', '140483805507024', '140483805507808', '140483805507920', '140483805509008', '140483805509184', '140483805510208', '140483805510848', '140483805511456', '140483805511568', '140483805511696', '140483805512720', '140483806051184', '140483806056448', '140483808401520']
+== Updating ClamAV virus definitions ==
+== Running ClamAV across quarantine directory ==
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/tokenizer_config.json: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/special_tokens_map.json: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/config.json: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/merges.txt: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.gitattributes: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/pytorch_model.bin: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/vocab.json: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/tf_model.h5: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/trees/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be.json: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/CACHEDIR.TAG: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/.gitignore: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/tf_model.h5.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/.gitattributes.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/vocab.json.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/merges.txt.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/tf_model.h5.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/tokenizer_config.json.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/special_tokens_map.json.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/tokenizer_config.json.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/special_tokens_map.json.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/config.json.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/config.json.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/flax_model.msgpack.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/merges.txt.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/flax_model.msgpack.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/.gitattributes.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/pytorch_model.bin.lock: Empty file
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/vocab.json.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/.cache/huggingface/download/pytorch_model.bin.metadata: OK
+/var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI/flax_model.msgpack: OK
+
+----------- SCAN SUMMARY -----------
+Known viruses: 3628104
+Engine version: 1.5.4
+Scanned directories: 5
+Scanned files: 21
+Infected files: 0
+Data scanned: 9.44 MiB
+Data read: 4.52 MiB (ratio 2.09:1)
+Time: 4.716 sec (0 m 4 s)
+Start Date: 2026:09:30 18:51:59
+End Date:   2026:09:30 18:52:04
+ClamAV result: PASS (full output: /var/folders/pn/3rtxc3nn4p118kxhpyqbhxsw0000gp/T/model-quarantine-XXXXXX.MhcQX75BVI.clamav.txt)
+
+====================================
+Model:       sshleifer/tiny-gpt2
+ModelScan:   PASS
+Fickling:    PASS
+ClamAV:      PASS
+====================================
+RESULT: APPROVE — safe to promote to the approved-models store.
+== Cleaning up staging dir and venv ==
